@@ -5,11 +5,18 @@ description = ""
 authors = ["nickvazz <nickvazquezz@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^2.7"
+python = "^3.5"
+behave = "^1.2.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.6"
 
+[tool.poetry.scripts]
+klickbrick = "klickbrick.cli:main"
+
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = [
+    "poetry-core>=1.0.0",
+    "behave>1.2.0"
+]
 build-backend = "poetry.core.masonry.api"
