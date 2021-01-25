@@ -8,9 +8,9 @@ def main(args=None):
 
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers()
-    
-    hello = subparsers.add_parser("hello", help='prints hello')
-    hello.add_argument('--name', type=str)
+
+    hello = subparsers.add_parser("hello", help="prints hello")
+    hello.add_argument("--name", type=str)
 
     parsed_args = parser.parse_args(args)
 
@@ -22,5 +22,6 @@ def main(args=None):
     print(output)
     return output
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main(sys.argv[1:])
